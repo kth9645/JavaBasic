@@ -64,6 +64,8 @@ public class SungJukV1 {
                         (mean>=70 && mean<80) ? '미' :
                                 (mean>=60 && mean<70) ? '양' :
                                         (mean>=0 && mean<60) ? '가' : '오';
+
+        System.out.printf("당신의 학점은 : %c \n",grd);
         
 
 
