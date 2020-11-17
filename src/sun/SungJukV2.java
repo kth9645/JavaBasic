@@ -35,21 +35,19 @@ public class SungJukV2 {
 
         char grd;
 
+        Scanner sc = new Scanner(System.in); // Scanner scanner = new Scanner(System.in);
+
         System.out.printf("이름을 입력하시오 : ");
-        Scanner scanner = new Scanner(System.in);
-        name = scanner.nextLine();
+        name = sc.nextLine();
 
         System.out.printf("국어 점수를 입력하시오 : ");
-        Scanner scanner1 = new Scanner(System.in);
-        kor = scanner.nextInt();
+        kor = sc.nextInt();
 
         System.out.printf("영어 점수를 입력하시오 : ");
-        Scanner scanner2 = new Scanner(System.in);
-        eng = scanner.nextInt();
+        eng = sc.nextInt();
 
         System.out.printf("수학 점수를 입력하시오 : ");
-        Scanner scanner3 = new Scanner(System.in);
-        mat = scanner.nextInt();
+        mat = sc.nextInt();
 
 
         System.out.printf("이름 : %s \n",name);  // println("이름 : " + name);
@@ -90,7 +88,7 @@ public class SungJukV2 {
                 break;
 
         }*/
-        switch ((int)mean/10) {
+        switch ((int)(mean/10)) {
             case 10:
                 if(mean==100) {
                     grd = '만';
@@ -102,29 +100,34 @@ public class SungJukV2 {
                 break;
             case 9:
                 grd = '수';
-                System.out.println("당신의 학점은 : "+grd);
+                System.out.println("학점 : "+grd);
                 break;
             case 8:
                 grd = '우';
-                System.out.println("당신의 학점은 : "+grd);
+                System.out.println("학점 : "+grd);
                 break;
             case 7:
                 grd = '미';
-                System.out.println("당신의 학점은 : "+grd);
+                System.out.println("학점 : "+grd);
                 break;
             case 6:
                 grd = '양';
-                System.out.println("당신의 학점은 : "+grd);
+                System.out.println("학점 : "+grd);
                 break;
             case 5:
                 grd = '가';
-                System.out.println("당신의 학점은 : "+grd);
+                System.out.println("학점 : "+grd);
                 break;
             default:
                 System.out.println("오류입니다.");
                 break;
 
         }
+
+
+        //String.format(형식지정자, 변수들)
+        //mean = Double.parseDouble(String.format("%.1f",mean));
+        // 실수 처리기.. 실제 사용밥법은 애매
 
 
 
