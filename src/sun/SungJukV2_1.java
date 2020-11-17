@@ -40,7 +40,7 @@ public class SungJukV2_1 {
 
         char grd;
 
-        String fmt = "이름 : %s \n국어 : %d \n영어 : %d \n수학 : %d \n총점 : %d \n평균 : %.1f \n학점 : %c";
+        String fmt = "이름 : %s \n국어 : %d \n영어 : %d \n수학 : %d \n총점 : %d \n평균 : %s \n학점 : %c";
         String result;
 
 
@@ -166,10 +166,12 @@ public class SungJukV2_1 {
 
 
         System.out.println("==========================================================");
-        
+
+        mean = Math.round(mean*100)/100.0;
+
         // 변수처리를 줘서 한번에 입력하는 메소드
         
-        result = String.format(fmt, name, kor, eng, mat, sum, mean, grd);
+        result = String.format(fmt, name, kor, eng, mat, sum, String.valueOf(mean), grd);
 
         System.out.println(result);
 
