@@ -92,8 +92,13 @@ public class SungJukV2 {
         }*/
         switch ((int)mean/10) {
             case 10:
-                grd = '만';
-                System.out.println("당신은 만점입니다.");
+                if(mean==100) {
+                    grd = '만';
+                    System.out.println("당신은 만점입니다.");
+                }
+                else {
+                    System.out.println("오류입니다.");
+                }
                 break;
             case 9:
                 grd = '수';
